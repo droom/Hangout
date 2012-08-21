@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>	
+	p{
+		font-size:1.4em;
+		}
+	
+	blockquote{
+		margin:0;
+		padding:0;
+		}
+	</style>
+		
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+ 
+<blockquote>
+	<p>&#8220; If you do not embrace the inherent fluidity of the web, you are not a web designer, you are something else.&#8221;</p>	
+</blockquote>
+	
+	<p>&#8220; If you do not embrace the inherent fluidity of the web, you are not a web designer, you are something else.&#8221;</p>
+
+<script>
+
+
+//$("blockquote:contains('p')").css("text-decoration", "underline");
+
+var myVar = $('blockquote').find('p').css('background-color', 'yellow');
+
+var myVarInner = myVar.html();
+var myVarInnerSliced = myVarInner.slice(1,2);
+
+//firstIndexOf
+
+console.log(myVar)
+console.log(myVarInner)
+
+console.log("myVarInnerSliced is "+myVarInnerSliced)
+
+myVarInnerSliced = 'hey';
+
+console.log("myVarInnerSliced is "+myVarInnerSliced)
+
+
+myVar.empty().html(myVarInnerSliced + myVarInner);
+
+
+
+
+//$("myVarInnerSliced").css('background-color', 'red');
+//$('body').children().each(function(){$(this).text($(this).text().replace('&#8220; ','&#8220;') )});
+// $('blockquote').find('p') = myVar;
+//var replaceWithThis = "hey you guys";
+//myVarInnerSliced.replace('replaceWithThis');
+
+</script>
+
+</body>
+</html>
