@@ -1,48 +1,50 @@
 <html>
-
 <head>
-
-<style>
-h1, h2, h3, p, body{
-font-family:Georgia;}
-
-#wrap{
-width:70%;
-margin:auto;
-}
-
-.hangout{
-	font-size:1.6em;
-	margin-left:-0.4em;
-}
-
-
-body{
-padding:20px 0;}
-
-</style>
-
-<script type="text/javascript" src="hangout.js"></script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="hangout_tumblr.js"></script>
+<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="hangout.css" rel="stylesheet" type="text/css">
 
 </head>
-
 <body>
 
-<div id="wrap">
 
-<h1>The Future of Smartphones? Just Add Tweezers...</h1>
-<h2>A report out this week suggested that smartphones had become "the new Swiss Army Knives", which is patently ridiculous, as your iPhone does not have a tool for getting stones out of horses' hooves. But what if it did? What if it had a little pair of scissors, and a bottle opener, too?</h2>
+<div id="mast">
+	<div class="content">
+		<h1 class="title">hangOut.js</h1>
+	</div>
+</div>
 
-<p>A mobile phone might currently be able to replace a notepad and a spirit level, but until they start kitting out these digital bricks with a bit of emery board on the back, they're no use to the lady with a nail-based emergency.</p>
-<p>"With this in mind, and in the interests of procrastination (I have proper stuff to write), I thought it only fair to conduct my own one-man feasibility study into a genuine Swiss Army Knife/smartphone combo."</p>
+<div class="content intro">
+	<h2>A jQuery plugin for hanging quotations on the <a href="#">tumblr</a> platform</h2>
+	<p>I've seen a thousand tumblr themes. I've not seen one with <a href="http://www.olivertomas.com/books/the-elements-of-typographic-style-part-1/">hanging punctuation</a>. This is because tumblr's generated markup makes it difficult to do. This plugin provides a CSS hook by applying a <span class="highlight">.hangOut</span> class to relevant quote marks. You can then style them as you wish.
+</div>
 
-<h3>Design</h3>
-<p>First of all, ask yourself if you would be happy with an iPhone that was roughly 2cm wider? Could your trouser pocket/handbag take the extra girth without suffering undue stress? "Assuming so, our proposed smartphone-come-Leatherman basically packs all of its tools in additional storage space either side of your phone." Think of your phone as you know it but now wearing a fat little rubberised jacket that is crammed full of gizmos. You still there? Good. <strong>Feasibility rating: 10</strong></p>
+<div class="content tumblr">
+		<blockquote>
+		<p>&#8220 If you do not embrace the inherent fluidity of the web, you are not a web designer, you are something else.&#8221;</p>
+		</blockquote>
+		<b>— John Stewart</b>
+</div>
 
-<h3>"Lightweight materials"</h3>
-<p>Using hard but lightweight materials (we all know they're out there - don't ask me for specifics), we're looking at about five or six that could be secreted into your phone's new multi-functional sleeve. Top of the list are the aforementioned bottle opener &amp; scissors, but I'd also suggest fold-out tweezers, screwdriver, corkscrew, and bringing the concept kicking and screaming into the 21st century, a standard-issue IKEA-sized allen key.</p>
+
+<hr class="hr1" />
+<div class="content download">
+	<p><a href="#">Download on GITHUB</a></p>
+	<p>Author: Chris Droom<br />Version: 1.0.2<br />License: GPL</p>
+</div>
+
+<hr />
+
+<div class="content">
+<p class="small">Copyright &copy; Chris Droom, 2012. I have to put this here for the GNU license to be legit.<br />
+With thanks to <a href="http://nickclarkson.me/">Nick Clarkson</a> for Splinter-like guidance.</p>
+</div>
+
+</div>
+
+<div id="footer"></div>
 
 </body>
 </html>
-
