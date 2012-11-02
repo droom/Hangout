@@ -1,44 +1,45 @@
 
 window.onload = function(){
 	
-console.log("hello world");
+	var qAll = [];
+	var qAll = $('blockquote').find('p');
 
-var ps = document.getElementsByTagName("p");
-
-var rep = ['"'];
-
-
-for(var i = 0; i < ps.length; i++){
-	var psInner = (ps[i].innerHTML)
-
-
-
-	var psInnerSlice = psInner.slice(0,1);
+	// var checkAgainst = "&#8220;";
 	
-		console.log(psInnerSlice)
+	console.log("There are "+qAll.length+" quotation marks that need to be hanged")
 
-	if (psInnerSlice == '"'){
-		var quoteFound = psInnerSlice;
-		console.log("FOUND "+quoteFound)
+	var n = String.fromCharCode(34);
+
+	
+	for(var i = 0; i < qAll.length; i++){
+		//console.log([i])
+
+		var allQuoteInner = qAll[i].innerHTML;
+		var allQuoteOuter = qAll[i];
 		
-		psInner =  '<span class=\"hangout\">&#8220;</span>' + psInner.substr(1,psInner.length);
+		//console.log(allQuoteInner);
 		
-		//ps[i].className += ' hangout';
+		var qMark = allQuoteInner.slice(0,1);
+		console.log(n)
+		console.log(qMark);
+		
+		var p = qMark.charCode;
+				console.log(p)
 
-		ps[i].innerHTML = psInner;
+		if (qMark == n){
+		
+			console.log("yo yo yo");
+		
+			}
+		 
+		var qRem = allQuoteInner.slice(1,allQuoteInner.length);
+		console.log(qRem);
+		
+		var qMark = "<p><span class=\"hangout\">&#8220;</span>";
+		var qEnd = "</p>";
+		var qHang = qMark+qRem+qEnd;
 
-		//uoteFound.document.write("<span class="hangout" )
-
+		$(allQuoteOuter).replaceWith(qHang)
 	}
 
-
-
-
 }
-
-}
-
-
-
-
-
